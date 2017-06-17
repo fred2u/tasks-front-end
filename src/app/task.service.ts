@@ -8,7 +8,8 @@ import { Task } from './task';
 
 @Injectable()
 export class TaskService {
-  private url = `${environment.backEnd.url}/tasks`;
+  // TODO: remove hard coded user id
+  private url = `${environment.backEnd.url}/10c0eb00-5325-11e7-b114-b2f933d5fe66/tasks`;
 
   constructor(private http: Http) {
   }
