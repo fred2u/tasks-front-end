@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let task of tasks | async">
-    {{task.title}}
-  </li>
-</ul>
+<md-list>
+  <h3 md-subheader>Task List</h3>
+
+  <app-task-list-item *ngFor="let task of tasks | async" [task]="task"></app-task-list-item>
+</md-list>
