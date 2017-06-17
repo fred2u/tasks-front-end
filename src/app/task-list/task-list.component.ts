@@ -18,4 +18,8 @@ export class TaskListComponent implements OnInit {
   ngOnInit() {
     this.tasks = this.taskService.find();
   }
+
+  addTask() {
+    
+  }
 }
