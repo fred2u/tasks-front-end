@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MdButtonModule,
+  MdCardModule,
   MdDialogModule,
   MdIconModule,
   MdInputModule,
-  MdListModule,
   MdToolbarModule
 } from '@angular/material';
 import 'hammerjs';
@@ -34,10 +34,10 @@ import { EditTaskComponent } from './edit-task/edit-task.component';
     FormsModule,
     BrowserAnimationsModule,
     MdButtonModule,
+    MdCardModule,
     MdDialogModule,
     MdIconModule,
     MdInputModule,
-    MdListModule,
     MdToolbarModule,
     AppRoutingModule
   ],

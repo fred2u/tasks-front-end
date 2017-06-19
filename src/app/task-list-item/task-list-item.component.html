@@ -1,4 +1,8 @@
-<md-list-item>
-  <h3 md-line>{{task.title}}</h3>
-  <p md-line>{{task.description}}</p>
-</md-list-item>
+<md-card>
+  <md-card-title>{{task.title}}</md-card-title>
+  <md-card-content>{{task.description}}</md-card-content>
+  <md-card-actions>
+    <button md-button>Edit</button>
+    <button md-button color="warn">Remove</button>
+  </md-card-actions>
+</md-card>

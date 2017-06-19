@@ -1,8 +1,5 @@
-<md-list>
-  <h3 md-subheader>Task List</h3>
-
-  <app-task-list-item *ngFor="let task of tasks | async" [task]="task"></app-task-list-item>
-</md-list>
+<h2>Task List</h2>
+<app-task-list-item *ngFor="let task of tasks | async" [task]="task"></app-task-list-item>
 
 <button class="md-fab-bottom-right" md-fab (click)="openCreateTaskDialog()">
   <md-icon>add</md-icon>
