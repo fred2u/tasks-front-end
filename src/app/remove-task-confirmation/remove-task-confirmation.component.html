@@ -1,3 +1,10 @@
-<p>
-  remove-task-confirmation works!
-</p>
+<h1 md-dialog-title>Remove task &laquo; {{task.title}} &raquo;</h1>
+
+<md-dialog-content>
+  Please confirm that you want to remove this task ?
+</md-dialog-content>
+
+<md-dialog-actions>
+    <button md-button md-dialog-close>Cancel</button>
+    <button md-raised-button color="warn" md-dialog-close="true">Confirm</button>
+  </md-dialog-actions>
