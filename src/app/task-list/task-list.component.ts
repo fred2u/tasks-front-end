@@ -18,13 +18,22 @@ export class TaskListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadTasks();
+  }
+
+  loadTasks() {
     this.tasks = this.taskService.find();
   }
 
   openCreateTaskDialog() {
     const dialogRef = this.dialog.open(EditTaskComponent);
-    const closedSub = dialogRef.afterClosed().subscribe(result => {
-      console.info('Dialog closed', result);
+    const closedSub = dialogRef.afterClosed().subscribe(task => {
+      if (task) {
+        this.taskService.create(task)
+          .then(() => this.loadTasks())
+        ;
+      }
+      
       closedSub.unsubscribe();
     });
   }
