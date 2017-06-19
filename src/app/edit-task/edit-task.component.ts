@@ -11,11 +11,13 @@ import { Task } from '../task';
 export class EditTaskComponent {
   isNew = true;
   task = new Task();
+  confirmationText = "Create";
 
   constructor(private dialog: MdDialogRef<EditTaskComponent>, @Inject(MD_DIALOG_DATA) data: any) {
     if (data && data.task) {
       this.isNew = false;
       this.task = data.task;
+      this.confirmationText = "Update";
     }
   }
 
