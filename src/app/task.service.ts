@@ -38,6 +38,14 @@ export class TaskService {
     ;
   }
 
+  remove(task: Task): Promise<void> {
+    return this.http
+      .delete(`${this.url}/${task.id}`)
+      .toPromise()
+      .then(response => null)
+    ;
+  }
+
   private handleError(error: Response) {
     console.error(error);
     const msg = `Error status code ${error.status} at ${error.url}`;
