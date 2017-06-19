@@ -19,13 +19,15 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskService } from './task.service';
 import { TaskListItemComponent } from './task-list-item/task-list-item.component';
 import { EditTaskComponent } from './edit-task/edit-task.component';
+import { RemoveTaskConfirmationComponent } from './remove-task-confirmation/remove-task-confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     TaskListItemComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    RemoveTaskConfirmationComponent
   ],
   entryComponents: [EditTaskComponent],
   imports: [
