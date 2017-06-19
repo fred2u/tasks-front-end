@@ -2,7 +2,7 @@
   <md-card-title>{{task.title}}</md-card-title>
   <md-card-content>{{task.description}}</md-card-content>
   <md-card-actions>
-    <button md-button>Edit</button>
+    <button md-button (click)="editTask()">Edit</button>
     <button md-button color="warn">Remove</button>
   </md-card-actions>
 </md-card>

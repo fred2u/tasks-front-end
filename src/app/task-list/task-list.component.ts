@@ -37,4 +37,18 @@ export class TaskListComponent implements OnInit {
       closedSub.unsubscribe();
     });
   }
+
+  openEditTaskDialog(task: Task) {
+    const data = { task: Object.assign({}, task) };
+    const dialogRef = this.dialog.open(EditTaskComponent, { data });
+    const closedSub = dialogRef.afterClosed().subscribe(task => {
+      if (task) {
+        this.taskService.update(task)
+          .then(() => this.loadTasks())
+        ;
+      }
+      
+      closedSub.unsubscribe();
+    });
+  }
 }
