@@ -30,6 +30,14 @@ export class TaskService {
     ;
   }
 
+  update(task: Task): Promise<Task> {
+    return this.http
+      .put(`${this.url}/${task.id}`, task)
+      .toPromise()
+      .then(response => response.json() as Task)
+    ;
+  }
+
   private handleError(error: Response) {
     console.error(error);
     const msg = `Error status code ${error.status} at ${error.url}`;
