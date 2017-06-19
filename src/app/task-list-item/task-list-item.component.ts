@@ -14,7 +14,14 @@ export class TaskListItemComponent {
   @Output()
   edit = new EventEmitter();
 
+  @Output()
+  remove = new EventEmitter();
+
   editTask() {
     this.edit.emit();
+  }
+
+  removeTask() {
+    this.remove.emit();
   }
 }
