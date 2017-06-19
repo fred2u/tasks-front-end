@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 import { environment } from '../environments/environment';
 import { Task } from './task';
@@ -16,9 +17,17 @@ export class TaskService {
 
   find(): Observable<Task[]> {
     return this.http
-      .get(`${this.url}`)
+      .get(this.url)
       .map(response => response.json() as Task[])
       .catch(this.handleError);
+  }
+
+  create(task: Task): Promise<Task> {
+    return this.http
+      .post(this.url, task)
+      .toPromise()
+      .then(response => response.json() as Task)
+    ;
   }
 
   private handleError(error: Response) {
