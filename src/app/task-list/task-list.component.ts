@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { TaskService } from '../task.service';
 import { Task } from '../task';
 import { EditTaskComponent } from '../edit-task/edit-task.component';
+import { RemoveTaskConfirmationComponent } from '../remove-task-confirmation/remove-task-confirmation.component';
 
 @Component({
   selector: 'app-task-list',
@@ -44,6 +45,20 @@ export class TaskListComponent implements OnInit {
     const closedSub = dialogRef.afterClosed().subscribe(task => {
       if (task) {
         this.taskService.update(task)
+          .then(() => this.loadTasks())
+        ;
+      }
+      
+      closedSub.unsubscribe();
+    });
+  }
+
+  openRemoveTaskDialog(task: Task) {
+    const data = { task: Object.assign({}, task) };
+    const dialogRef = this.dialog.open(RemoveTaskConfirmationComponent, { data });
+    const closedSub = dialogRef.afterClosed().subscribe(confirmation => {
+      if (confirmation) {
+        this.taskService.remove(task)
           .then(() => this.loadTasks())
         ;
       }

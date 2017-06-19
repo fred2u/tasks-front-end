@@ -29,7 +29,10 @@ import { RemoveTaskConfirmationComponent } from './remove-task-confirmation/remo
     EditTaskComponent,
     RemoveTaskConfirmationComponent
   ],
-  entryComponents: [EditTaskComponent],
+  entryComponents: [
+    EditTaskComponent,
+    RemoveTaskConfirmationComponent
+  ],
   imports: [
     BrowserModule,
     HttpModule,
