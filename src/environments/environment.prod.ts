@@ -1,6 +1,6 @@
 export const environment = {
   backEnd: {
-    url: 'http://be.tasks.local'
+    url: 'http://api.tasks.dev-one.com'
   },
   production: true
 };
