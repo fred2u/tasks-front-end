@@ -4,7 +4,7 @@ FROM node:boron
 WORKDIR /usr/src/app
 
 # Install app dependencies
-RUN npm install -g @angular/cli@1.1.2
+RUN npm install -g @angular/cli@1.3.0
 COPY package.json package-lock.json ./
 RUN npm install
 
