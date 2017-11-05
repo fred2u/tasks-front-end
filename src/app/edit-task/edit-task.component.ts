@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { Task } from '../task';
 
@@ -13,7 +13,7 @@ export class EditTaskComponent {
   task = new Task();
   confirmationText = "Create";
 
-  constructor(private dialog: MdDialogRef<EditTaskComponent>, @Inject(MD_DIALOG_DATA) data: any) {
+  constructor(private dialog: MatDialogRef<EditTaskComponent>, @Inject(MAT_DIALOG_DATA) data: any) {
     if (data && data.task) {
       this.isNew = false;
       this.task = data.task;

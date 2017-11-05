@@ -1,23 +1,23 @@
 <form #taskForm="ngForm" (ngSubmit)="close()">
-  <h1 md-dialog-title>Create a task</h1>
+  <h1 mat-dialog-title>Create a task</h1>
 
-  <md-dialog-content>
+  <mat-dialog-content>
     <div>
-      <md-input-container>
-        <input type="text" name="title" placeholder="Title" required autofocus mdInput [(ngModel)]="task.title" #title="ngModel">
-        <md-error *ngIf="title.hasError('required')">This field is required.</md-error>
-      </md-input-container>
+      <mat-input-container>
+        <input type="text" name="title" placeholder="Title" required autofocus matInput [(ngModel)]="task.title" #title="ngModel">
+        <mat-error *ngIf="title.hasError('required')">This field is required.</mat-error>
+      </mat-input-container>
     </div>
 
     <div>
-      <md-input-container>
-        <textarea name="description" placeholder="Description" [(ngModel)]="task.description" mdInput></textarea>
-      </md-input-container>
+      <mat-input-container>
+        <textarea name="description" placeholder="Description" [(ngModel)]="task.description" matInput></textarea>
+      </mat-input-container>
     </div>
-  </md-dialog-content>
+  </mat-dialog-content>
 
-  <md-dialog-actions>
-    <button type="reset" md-button md-dialog-close>Cancel</button>
-    <button type="submit" md-raised-button color="primary" [disabled]="!taskForm.form.valid">{{confirmationText}}</button>
-  </md-dialog-actions>
+  <mat-dialog-actions>
+    <button type="reset" mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!taskForm.form.valid">{{confirmationText}}</button>
+  </mat-dialog-actions>
 </form>

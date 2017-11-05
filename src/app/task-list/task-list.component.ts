@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 
 import { TaskService } from '../task.service';
@@ -15,7 +15,7 @@ import { RemoveTaskConfirmationComponent } from '../remove-task-confirmation/rem
 export class TaskListComponent implements OnInit {
   tasks: Observable<Task[]>;
 
-  constructor(private taskService: TaskService, private dialog: MdDialog) {
+  constructor(private taskService: TaskService, private dialog: MatDialog) {
   }
 
   ngOnInit() {

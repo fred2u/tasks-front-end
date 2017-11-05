@@ -1,7 +1,7 @@
 <h2>Task List</h2>
 <app-task-list-item *ngFor="let task of tasks | async" [task]="task" (edit)="openEditTaskDialog(task)" (remove)="openRemoveTaskDialog(task)"></app-task-list-item>
 
-<button class="md-fab-bottom-right" md-fab (click)="openCreateTaskDialog()">
-  <md-icon>add</md-icon>
+<button class="mat-fab-bottom-right" mat-fab (click)="openCreateTaskDialog()">
+  <mat-icon>add</mat-icon>
 </button>
 

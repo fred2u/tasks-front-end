@@ -1,15 +1,14 @@
 body {
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.md-fab-bottom-right {
+.mat-fab-bottom-right {
   position: fixed !important;
   right: 20px;
   bottom: 20px;
 }
 
-[md-button], [md-raised-button] {
+[mat-button], [mat-raised-button] {
   text-transform: uppercase;
 }

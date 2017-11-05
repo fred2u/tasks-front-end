@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { Task } from '../task';
 
@@ -11,7 +11,7 @@ import { Task } from '../task';
 export class RemoveTaskConfirmationComponent {
   task: Task;
 
-  constructor(private dialog: MdDialogRef<RemoveTaskConfirmationComponent>, @Inject(MD_DIALOG_DATA) data: any) {
+  constructor(private dialog: MatDialogRef<RemoveTaskConfirmationComponent>, @Inject(MAT_DIALOG_DATA) data: any) {
     this.task = data.task;
   }
 }
