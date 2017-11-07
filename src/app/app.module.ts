@@ -11,6 +11,7 @@ import {
   MatInputModule,
   MatToolbarModule
 } from '@angular/material';
+import './rxjs-operators';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
