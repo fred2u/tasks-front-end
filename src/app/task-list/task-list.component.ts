@@ -13,7 +13,7 @@ import { RemoveTaskConfirmationComponent } from '../remove-task-confirmation/rem
   styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent implements OnInit {
-  tasks: Observable<Task[]>;
+  tasks: Observable<Array<Task>>;
 
   constructor(private taskService: TaskService, private dialog: MatDialog) {
   }
