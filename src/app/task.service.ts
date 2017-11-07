@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 import { environment } from '../environments/environment';
 import { Task } from './task';
@@ -45,7 +46,7 @@ export class TaskService {
 
   private handleError(error: Response) {
     console.error(error);
-    const msg = `Error status code ${error.status} at ${error.url}`;
+    const msg = `[TaskService] ${error.statusText}.`;
 
     return Observable.throw(msg);
   }
